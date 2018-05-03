@@ -1,2 +1,2 @@
-# inform-studio
+# Inform Studio
 Repository for the main site.
