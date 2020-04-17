@@ -5,7 +5,7 @@
   "description": "Portfolio site for Inform Studio",
   "author": "Sean Kelley",
   "dependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "handlebars-helper-repeat": "^2.0.0",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
