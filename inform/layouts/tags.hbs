@@ -1,0 +1,41 @@
+{{> header }}
+{{> top-nav active="Blog"}}
+<nav class="fl-l">
+      <ul class="list pl0">
+        <li class="dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/">By Date</a>
+        </li>
+        <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/tags" style="font-weight:600; color: black;">By Tag</a>
+        <p class="f6 mw5 dn db-l">All entries grouped by tag.</p>
+        <p class="f6 mw5 dn db-l">
+          {{#each this.tags}}
+        <a href="#{{slugify @key}}">{{@key}}</a>{{#unless @last}} &#8226; {{/unless}}
+        {{/each}}
+        </p>
+        </li>
+      </ul>
+      <p class="f6 mw5 db dn-l">
+          {{#each this.tags}}
+        <a href="#{{slugify @key}}">{{@key}}</a>{{#unless @last}} &#8226; {{/unless}}
+        {{/each}}
+      </p>
+    </nav>
+</div>
+</header>
+  <main class="mw8 fl mt3-l mt0 pl4-l">
+    <div class="pl3-l pr3-l pr2 pl2">
+    {{#each this.tags}}
+      <div class="mb4-l mb3">
+      <h1 id="#{{slugify @key}}" class="fw4 f4-l f5">{{@key}}</h1>
+      {{#each this}}
+        <div class="blog-entry">
+          <p class="mb0 f5-l f6"><a href="/{{path}}">{{title}}</a></p>
+          <p class="f7" style="margin-top: 0.2rem;">{{ published }}</p>
+        </div>
+      {{/each}}
+      </div>
+    {{/each}}
+    </div>
+    {{> footer }}
+  </main>
+</body>
+</html>

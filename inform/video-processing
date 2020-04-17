@@ -1,0 +1,26 @@
+# for video
+
+ffmpeg -i $file
+    -vframes 1 thumb.jpg               # get first frame and create jpg
+    -vf scale=660:-1 thumb.mp4         # resize video
+    
+# for image thumbnails
+
+convert $file
+  -resize 660x 660w-thumb.jpg
+  -resize 330x 330w-thumb.jpg
+  
+# for full image sizes
+
+convert $file
+  -resize '1920x10000>' large.jpg     #resize only if larger than 1920w
+convert large.jpg
+  -resize 50% medium.jpg
+  -resize 480x small.jpg
+identify -ping -format '%w %h' large.jpg
+identify -ping -format '%w %h' medium.jpg
+identify -ping -format '%w %h' small.jpg
+
+# batch convert png into jpg
+    
+for i in *.png ; do convert "$i" "${i%.*}.jpg" ; done

@@ -1,0 +1,40 @@
+<div class="flex flex-wrap">
+  {{#each (limit work 6) }}
+    <div class="w-third pa3-l pa0 relative overflow-hidden">
+        <a class="link black" href="/{{ path }}">
+          <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
+            <div class="w-100 pa1 bg-white">
+              <p class="f6">{{ title }}</p>
+              <p class="f7">{{ date }}</p>
+            </div>
+          </div>
+          {{#if video}}
+          <video autoplay loop muted playsinline class="db lazy w-100">
+            <source
+                    data-src="/{{ path }}/thumb.mp4"
+                    type="video/mp4"> 
+            <img
+                 data-src="/{{ path }}/thumb.jpg"
+                 title="Your browser does not support the <video> tag">
+          </video>
+          {{else}}
+          <img class="db lazy w-100"
+               data-src="/{{ path }}/512w-thumb.jpg"
+               data-srcset="/{{ path }}/256w-thumb.jpg 256w,
+                            /{{ path }}/512w-thumb.jpg 512w"
+               alt="{{ alt }}">
+          {{/if}}
+        </a>
+      </div>
+  {{/each}}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.0.0/dist/lazyload.min.js"></script>
+
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+      elements_selector: ".lazy",
+//    callback_loaded: (el)=>{console.log("Loaded", el)}
+    });
+  </script>

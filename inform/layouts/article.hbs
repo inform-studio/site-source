@@ -1,0 +1,27 @@
+{{> header }}
+{{> top-nav active="Blog"}}
+<nav class="fl-l dn db-l">
+  <ul class="list pl0">
+    <li class="dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/">By Date</a>
+    </li>
+    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/tags">By Tag</a></li>
+  </ul>
+</nav>
+</div>
+</header>
+  <main class="w-100 mw7 fl mt3-l mt0 pl4-l pl0">
+    <div class="pl3-l pr3-l">
+      <h1 class="f4 fw4 mb4-l pr2 pl2 pl0-l pr0-l">{{ title }}</h1>
+      <article class="mw6 f5-l f6 contents">{{{ contents }}}</article>
+      <p class="f6-l f7 mt4-l pl2 pr2 pl0-l pr0-l">Published: {{ published }}
+        {{#if tag}} &#8226; Tagged: 
+          {{#each tag}}
+           <a href="/blog/tags#{{slugify . }}">{{ . }}</a>{{#unless @last}},{{/unless}}
+          {{/each}}
+        {{/if}}
+      </p>
+    </div>
+  {{> footer }}
+</main>
+</body>
+</html>

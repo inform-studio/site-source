@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+  <title>Inform Studio</title>
+  <meta charset = "UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/tachyons.min.css">
+  <link rel="stylesheet" href="/inter.css">
+  <style>
+    @import "/inter.css";
+    html { font-family: 'Inter', sans-serif; line-height: 1.15;}
+    @media (min-width: 60rem) {
+      html {line-height: 1.5;}
+    }
+    @media (max-width: 60rem) {
+      .grid-item {
+      padding: 0.125rem;
+      }
+      .grid-spacer {
+      padding-left: 0.125rem;
+      padding-right: 0.125rem;
+      }
+    }
+    .contents :not(img) {
+      max-width: 30em;
+    }
+    .video-thumb::-internal-media-controls-overlay-cast-button {
+      display: none;
+    }
+    .fade-in {
+        opacity: 0;
+      }
+    .fade-in:hover {
+        opacity: 1;
+      }
+      .fade-in {
+        opacity: 0;
+      }
+      .fade-in:hover {
+        opacity: 1;
+      }
+    
+      /* Styling for lazy loaded images */
+
+      .lazy {
+        opacity:0;
+        transition: opacity 1s;
+      }
+
+      .lazy.initial {
+        transition: none !important;
+      }
+      .lazy.initial,
+      .lazy.loaded,
+      .lazy.error {
+        opacity: 1 !important;
+      }
+    </style>
+  </head>

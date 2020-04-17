@@ -1,0 +1,24 @@
+<!--
+{{#if host}}
+
+  {{#if_eq host "Vimeo"}}
+    <div style="padding:56.25% 0 0 0;position:relative;" class=""><iframe src="https://player.vimeo.com/video/330248913?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="{{ full }}"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+  {{/if_eq}}
+
+  {{#if_eq host "Youtube"}}
+  {{/if_eq}}
+
+  {{#if_eq host "NIST"}}
+    <iframe src="https://cdnapisec.kaltura.com/p/684682/sp/68468200/embedIframeJs/uiconf_id/31013851/partner_id/684682?iframeembed=true&playerId=iframeVid&entry_id=0_q1zkwqo8&flashvars[streamerType]=auto" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" frameborder="0"></iframe>
+  {{/if_eq}}
+
+{{else}}
+
+{{/if}}-->
+<div style="width: 100%; max-width: {{ width }}">
+  <div style="{{#if box}}padding:100%{{else}}padding:56.25%{{/if}} 0 0 0;position:relative;" class="">
+    <iframe src="{{ full }}?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+</div>
+<script src="https://player.vimeo.com/api/player.js"></script>

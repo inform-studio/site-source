@@ -1,0 +1,34 @@
+<header class="pl4-l pr0-l pr2 pl2 fl-l mt3">
+      <h1 class="f4-l f5 fw3 mb4-l mb1-l title-margin mb0 pt1 pt0-l"><a href="/" class="link dark-gray">Inform Studio</a></h1>
+<!--      <p class="f6-l f7 mw5 dn db-l">Visual Design for Scientific Communication</p>-->
+      <div class="fl-l fr mr2 mr0-l">
+      <nav>
+        <ul class="list pl0 mt0 mb0 mb4-l">
+          {{ currentPage }}
+          <li class="dib db-l">
+            <a href="/work/" class="f4 link dim dark-gray-l {{#if_eq active "Work"}}underlined{{/if_eq}}
+              {{#if index}}dark-gray"{{else}}gray"{{/if}}
+              {{#if_eq active "Work"}}style="font-weight: 500; color: black;"{{/if_eq}}
+              >Work</a></li>
+              {{#if_eq active "Work"}} <div class="dn db-l">{{> nav }} </div>{{/if_eq}}
+<!--
+          <li class="mt2-l mt0 ml3 ml0-l dib db-l">
+            <a href="/blog/" class="f4 link dim dark-gray-l
+               {{#if index}}dark-gray"{{else}}gray"{{/if}}
+               {{#if_eq active "Blog"}}style="font-weight: 500; color: black;"{{/if_eq}}
+               >Blog</a></li>
+-->
+          <li class="mt3-l mt0 ml3 ml0-l dib db-l">
+            <a href="/about/" class="f4 link dim dark-gray-l {{#if_eq active "About"}} underlined {{/if_eq}}
+               {{#if index}}dark-gray"s{{else}}gray"{{/if}}
+               {{#if_eq active "About"}}style="font-weight: 500; color: black;"{{/if_eq}}
+               >About</a></li>
+<!--
+           <li class="mt4-l mt0 ml3 ml0-l dib db-l">
+            <a href="mailto:sean@inform.studio" class="f4 link dim dark-gray-l underlined
+               {{#if index}}dark-gray"s{{else}}gray"{{/if}}
+               >Contact</a></li>                                                               
+-->
+        </ul>
+        <p class="f7 mw5 dn db-l">Inform Studio &#8226; Salisbury MD USA  <a href="mailto:sean@inform.studio" class="">sean@inform.studio</a></p>
+      </nav>
