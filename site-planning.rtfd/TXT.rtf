@@ -1,0 +1,168 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red46\green174\blue187;
+\red0\green0\blue233;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c100000\c100000\c100000\c80000;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c0\c0\c93333;}
+\margl1440\margr1440\vieww19000\viewh8760\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 TODO for site:\
+\
+Script to make looped video\
+	- convert to mp4 with settings for loop (see settings used for double slit loops)\
+	- if fade=true, crossfade end of video into beginning \
+\
+How to handle multiple images above the description? Convert yaml front matter to:\
+\
+Images:\
+	- full: "large.jpg"\
+		width: "900px"\
+		sizes: "large.jpg 1811w, medium.jpg 906w, small.jpg 480w"\
+	- full: "large.jpg"\
+		width: "900px"\
+		sizes: "large.jpg 1811w, medium.jpg 906w, small.jpg 480w"\
+\
+Under 480px -> images should be square (if possible)? Or at least taller..\
+\
+Write about page\
+Write copyright page\
+\
+Make all the entries\'85 yikes..  just get the images in there, fill in the details later\'85\
+\
+Get Vimeo subscription?\
+\
+\'97\'97\
+\
+Video notes: export from AME with preset (don\'92t know why but its the magic sauce) \'96\'96\'96 this means that faded loops have to be made before!\
+\
+NOPE\
+\
+Is it the audio track\
+\
+NOPE\
+\
+Special sauce is 24fps, no audio? Can\'92t do 29.97, or have an audio track\
+\
+NOPE\
+\
+Special sauce is VBR 2 pass in handbrake avg. bitrate 10000 VFR \
+So\'85.\
+Maybe the issue is with the VFR (variable frame rate) need to set that with ffmpeg? \
+\
+IT WAS VARIABLE FRAME RATE !!!!!!!!!!!!!!!!!!\
+\
+Why though? No idea. Question for another night\
+\
+Okay, seems like its because of a mismatch between the container duration and the stream duration:\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic 751F9E03-D840-4399-B862-27B46BDE6D85.png \width16060 \height3700 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+Just checked with another file, that seems to be the issue.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\b\fs22 \cf2 \cb3 \CocoaLigature0 ffmpeg
+\f2\b0  \cf4 -i\cf2  \cf4 thumb-660.mp4\cf2  \cf4 -codec\cf2  \cf4 copy\cf2  \cf4 -an\cf2  \cf4 \ul \ulc4 copy.mp4\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \ulnone \CocoaLigature1 ^ remux  video without the audio (-an) \'97\'97 this seems to be causing the issue \'85. So it was the audio stream all along\'85. Messing up the container size \
+\
+If fade loop:\
+Run script to make fade loop\
+Then:\
+Resize + compress with ffmpeg\
+Confirm that container matches \
+output mp4 and web versions\
+\
+\'97\'97\
+\
+\
+For static site - work section\
+\
+Each image has for front matter:\
+\
+Thumbnail (path to image)\
+Banner (full image) (filter based on if static image or mp4) (path to image)\
+Title\
+Date (day month and year, only display month and year in caption)\
+Client (optional)\
+Caption (text entry, short description of what the image shows)\
+Category (Animation, Illustration, Graphic Design, etc\'85)\
+Link to where it appears on the web (optional)\
+Video tag (video: true)\
+\
+Then the entry text is about more details (process behind making image, interesting problems, etc)\
+\
+Bash script to make new entry (asks for name, creates new markdown file + folder based on that name)\
+\
+Thumb sizes:\
+	300 @ 1x\
+	600 @ 2x\
+\
+@ less that 600 screen sizes\
+	200 @ 1x\
+	400 @ 2x\
+\
+Partials:\
+Footer\
+Nav bar\
+Blog footer (comments or questions about this article? Shoot an email to comments@inform.studio with the title of the article) \
+\
+\
+Templates:\
+Index (overview of all work)\
+About\
+Copyright Information\
+Work\
+- All\
+	- tag cloud nav \
+- Filtered page (by Illustration, Animation, etc.)\
+- Project (individual work item)\
+Blog\
+- Index of blog\
+- Individual blog article\
+\
+CSS\
+- shared for all pages\
+- specific to each partial\
+- specific for each page\
+\
+Thumbnails and full images are in different folders\
+\
+\ul Processing pipeline\ulnone \
+Processing images:\
+	- resize thumbnails (square) and full @ multiple sizes, handle with media queries\
+		- thumb is 330, @2x 660\
+	- width 960px default, @1x 960px, @2x 1920px substitute (or highest resolution available) @4x 2840 (or highest resolution available)\
+		if file@2x \{ use @2x \} else \{ use file@full-resolution \}\
+Processing video: \
+	- make square (for thumbnail) by hand\
+		- thumbnails loop by fade, 2 seconds long\
+		- webm and mp4 versions of each\
+		- have cover image in case not supported\
+	- do resizing + conversion to multiple formats with ffmpeg: {\field{\*\fldinst{HYPERLINK "https://www.npmjs.com/package/ffmpeg"}}{\fldrslt 
+\f3 \cf5 \expnd0\expndtw0\kerning0
+\ul \ulc5 https://www.npmjs.com/package/ffmpeg}}
+\f3 \cf5 \expnd0\expndtw0\kerning0
+\ul \ulc5 \
+\
+\
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulc0 Stretch goals\
+\
+Useability\
+\ulnone - Toggle animated thumbnails\ul \
+\ulnone - Light/Dark toggle (with sun and moon) \'97 changes background color and font color\
+(Both can be put in a settings menu for mobile site)\ul \
+\
+\ulnone Generate a report for a given period of time of all projects completed for a given client (NIST), get all projects + summary (description) + thumbnails, can be all time as well (all projects)\
+
+\f3 \cf5 \expnd0\expndtw0\kerning0
+\ul \ulc5 \
+}

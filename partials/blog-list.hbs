@@ -1,0 +1,13 @@
+{{#each blog }}
+  <div class="blog-entry">
+    <article style="margin-bottom: 0; font-size: 1.1rem;"><a href="/{{path}}">{{title}}</a></article>
+    <p class="blurb">{{blurb}}</p>
+    <p class="meta" style="margin-top: 0.2rem;">{{ published }}
+      {{#if tag}} &#8226; Tagged: 
+        {{#each tag}}
+         <a href="/blog/tags#{{slugify . }}">{{ . }}</a>{{#unless @last}},{{/unless}}
+        {{/each}}
+      {{/if}}
+    </p>
+  </div>
+{{/each}}
