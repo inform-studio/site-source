@@ -3,10 +3,10 @@ title: "Visual Design for Scientific Communication"
 layout: static.hbs
 permalink: false
 ---
-<div id="about" class="mw6 right tc">
-  <img src="/images/headshot.jpg" class="br-100 dib mb1 ba b--dark-gray mt0-l mt2" style="width: 200px; height: 200px;">
+<div id="about" class="mw6 right tc-l tl">
+  <img src="/images/headshot.jpg" class="w4 h4 br-100 dib mb1 ba b--dark-gray mt0-l mt2 headshot">
   <p class="f3-l f4 fw4 mt2-l mt1 pt2 pt0-l">Hi! I'm Sean Kelley.</p>
-  <p class="f5-l f6 mt2-l mt0 measure tl">I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
+  <p class="f5 mt2-l mt0 measure tl">I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
 </div>
 
 I have over nine years of experience providing scientifically accurate explanatory illustrations and animations for physics, engineering, chemistry, and other natural science topics.

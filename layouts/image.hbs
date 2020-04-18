@@ -22,10 +22,10 @@
         <p class="f7 mw7">
           {{#if date}}{{ date }}{{/if}}
           {{#if client}} &#8226; {{ client }}{{/if}}
-          {{#if weblink}} &#8226; <a href="{{ weblink }}" class="link blue dim bb">{{ weblink }}</a>{{/if}}
+          {{#if weblink}} &#8226; <a href="{{ weblink }}" class="link blue dim bb-l">{{ weblink }}</a>{{/if}}
           {{#if tag}} &#8226; Tagged: 
           {{#each tag}}
-           <a href="/tags/{{slugify . }}#work" class="link blue dim bb">{{ . }}</a>{{#unless @last}},{{/unless}}
+           <a href="/tags/{{slugify . }}#work" class="link blue dim bb-l">{{ . }}</a>{{#unless @last}},{{/unless}}
           {{/each}}
           {{/if}}
         </p>
@@ -38,12 +38,12 @@
       {{/if}}
     </div>
     <div class="pl1 pr1 pa0-l">
-      <p class="f7 mt3-l {{#if contents}}{{else}}pt2-l{{/if}} mb3 mw6">Questions about the artwork? Email <a href="mailto:sean@inform.studio" class="link blue dim bb">sean@inform.studio</a>. &#8226; <a href="/copyright.html" class="link blue dim bb">Copyright Information</a></p>
+      <p class="f7 mt3-l {{#if contents}}{{else}}pt2-l{{/if}} mb3 mw6">Questions about the artwork? Email <a href="mailto:sean@inform.studio" class="link blue dim bb-l">sean@inform.studio</a>. &#8226; <a href="/copyright.html" class="link blue dim bb-l">Copyright Information</a></p>
     </div>
     <div class="w-100 mw7 flex mt2-l mb3-l mb2 pl1 pr1 pl0-l pr0-l pt1">
       {{#if previous }}
       <div class="w-third fl tl pt2-l pt1">
-        <a href="/{{ previous.path }}" class="bb b--black-90 fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">← Previous</a>
+        <a href="/{{ previous.path }}" class="fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">← Previous</a>
         <div class="relative overflow-hidden mt2 ba b--light-gray br2">
         <a class="link black" href="/{{ previous.path }}">
           <div class="dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1 tl">
