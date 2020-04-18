@@ -1,29 +1,38 @@
 {{> header }}
-<body class="w-100 black-90 f6 relative pa3-l pb1 pt1 mw8 center">
+<body class="w-100 black-90 f6 relative pa3-l pb1 pt1 mw8 center" style="background-color: rgb(252, 252, 252)">
   <main>
-    <div class="mw6-l pl3-l pl1 pr1 pr0-l">
-      <div id="title" class="">
-        <h2 class="mb0 f5-l f6 fw4 mt3-l mt1 pt2 pt0-l pb2 pb1-l"><a href="/" class="link black-90 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80">Inform Studio</a></h2>
-        <h3 class="f3-l f4 fw4 mb4-l mb0 mt1">Visual Design for Scientific Communication</h3>
-      </div>
-      <div id="about">
-        <img src="/images/headshot.jpg" class="br-100 h4 fl mr4-l mr3 w4 dib mb3-l mb1 ba b--dark-gray mt0-l mt2">
-        <p class="f4 fw4 mt2-l mt1 pt2 pt0-l">Hi! I'm Sean Kelley.</p>
-        <p class="mt2-l mt0 measure">I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
-        <p class="measure">Inform Studio is my design studio specializing in scientific communication. From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form. <a class="bg-animate hover-bg-light-gray" href="/about.html" class="">Learn more</a>.</p>
-        <p class="measure">Interested in working together? I'd love to hear from you: <a class="bg-animate hover-bg-light-gray" href="mailto:sean@inform.studio" class="">sean@inform.studio</a>.</p>
-      </div>
-    </div>
     <div class="pl3-l pl1 pr1 pr0-l">
-      <p class="f4 fw4 pt4-l mb0 bb b--black-80 mr3-l" id="work">{{#if title}}{{title}}{{else}}Past Work{{/if}}</p>
-      <p class="mb0 fl mt3-l mt2-l mt3 pr3-l pr2">Filter by category:</p>
-      <ul class="list pl0 mt3 mb3-l mb0">
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80 {{#if title}}{{else}}fw5 black bg-light-gray{{/if}}" href="/#work">All</a></li>
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80{{#if_eq title "Illustration"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/illustration#work">Illustration</a></li>
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80{{#if_eq title "Animation"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/animation#work">Animation</a></li>
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80{{#if_eq title "Diagrams"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/diagrams#work">Diagrams</a></li>
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80{{#if_eq title "Journal Covers"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/journal-covers#work">Journal Covers</a></li>
-        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80{{#if_eq title "Interactive"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/interactive#work">Interactive</a></li>
+      <div id="title" class="mw6-l ">
+      </div>
+      <div id="head" class="w-100 center">
+        <img src="/images/hero-image-1.jpg" class="fr br4 shadow-3 dn db-l" style="width: 560px;">
+        <div class="mb0 f5-l f6 fw4 mt3-l mt1 pt2 pt4-l pb2 pb2-l dn db-l"><a href="/" class="link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">Inform Studio</a></div>
+        <p class="f2-l f3 fw4 mt3 black-90 dn db-l">Sometimes words<br>fall short.</p>
+        
+        <div class="db dn-l">
+          <div class="mb0 f5-l f6 fw4 pt2 pt4-l pb2 pb2-l absolute top-0 mt3 pt2 pl2"><a href="/" class="link white dim ba pa2 br2">Inform Studio</a></div>
+          <p class="f2-l f3 fw4 pl2 absolute top-0 mt5 white">Sometimes words<br>fall short.</p>
+          <img src="/images/hero-image-1.jpg" class="mw6">
+        </div>
+        
+      </div>
+      <div class="pr5" style="max-width: 26rem">
+       <p class="f4-l f5 mt5-l"><span class="fw5">Inform Studio</span> is a design studio specializing in scientific communication. </p>
+        <p class="f5-l f5 measure lh-copy-l">From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
+        <p class="f5-l f5"> <a class="dim blue link bb fw5" href="/about.html" class="">Learn more.</a></p>
+      </div>
+      <div class="w-100" style="clear: both;"></div>
+    </div>
+    <div class="pl3-l pl1 pr1 pr0-l mt0-l mt4">
+      <p class="f3-l f4 fw4 mb0 bb b--black-80 mr3-l" id="work">{{#if title}}{{title}}{{else}}Past Work{{/if}}</p>
+      <p class="mb0 fl mt3 pr3-l pr2 pt1-l pt0">Filter by category:</p>
+      <ul class="list pl0 mt3 mb3-l mb0 pt1-l pt0">
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80 {{#if title}}{{else}}fw5 black bg-light-gray{{/if}}" href="/#work">All</a></li>
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80{{#if_eq title "Illustration"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/illustration#work">Illustration</a></li>
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80{{#if_eq title "Animation"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/animation#work">Animation</a></li>
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80{{#if_eq title "Diagrams"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/diagrams#work">Diagrams</a></li>
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1  br2 b--black-80{{#if_eq title "Journal Covers"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/journal-covers#work">Journal Covers</a></li>
+        <li class="dib pr3-l pr2 pb3 pb0-l"><a class="link black-80 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80{{#if_eq title "Interactive"}} fw5 black bg-light-gray {{/if_eq}}" href="/tags/interactive#work">Interactive</a></li>
       </ul>
     </div>
     <div class="pa0-l grid-spacer">{{> grid category=title}}</div>

@@ -4,16 +4,10 @@
     {{#each work }}
         {{#each tag}}
           {{#if_eq this ../../category}}
-            <div class="w-third pa3-l grid-item relative overflow-hidden ma0">
-              <a class="link black" href="/{{ ../path }}">
-                <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
-                  <div class="w-100 pa1 bg-white">
-                    <p class="f6">{{ ../title }}</p>
-                    <p class="f7">{{ ../date }}</p>
-                  </div>
-                </div>
+            <div class="w-third pa3-l pb2-l grid-item relative overflow-hidden ma0">
+              <a class="link black dim db" href="/{{ ../path }}">
                 {{#if ../video}}
-                <video loop muted playsinline poster="/{{ ../path }}/thumb.jpg" class="lazy w-100 video-thumb">
+                <video loop muted playsinline poster="/{{ ../path }}/thumb.jpg" class="lazy w-100 video-thumb ba b--light-gray br2">
                   <source
                           data-src="/{{ ../path }}/thumb.mp4"
                           type="video/mp4"> 
@@ -22,13 +16,19 @@
                        title="Your browser does not support the <video> tag">
                 </video>
                 {{else}}
-                <img class="db lazy w-100"
+                <img class="db lazy w-100 ba b--light-gray br2"
                      data-src="/{{ ../path }}/512w-thumb.jpg"
                      data-srcset="/{{ ../path }}/256w-thumb.jpg 256w,
                                   /{{ ../path }}/512w-thumb.jpg 512w"
                      alt="{{ ../alt }}">
                 {{/if}}
               </a>
+              <div class="dn db-l z-1">
+                <div class="w-100 pa2">
+                  <p class="f6 mt1 mb1"><a href="/{{ ../path }}" class="link black dim">{{ ../title }}</a></p>
+                  <p class="f7 mt0 mb0">{{ ../date }}</p>
+                </div>
+              </div>
             </div>
           {{/if_eq}}
         {{/each}}
@@ -37,16 +37,10 @@
   {{else}}
   
   {{#each work }}
-    <div class="w-third pa3-l grid-item relative overflow-hidden">
-        <a class="link black" href="/{{ path }}">
-          <div class="dn db-l absolute w-100 h-100 h-100 pr4-l pb4-l fade-in z-1">
-            <div class="w-100 pa1 bg-white">
-              <p class="f6">{{ title }}</p>
-              <p class="f7">{{ date }}</p>
-            </div>
-          </div>
+    <div class="w-third pa3-l pb2-l grid-item relative overflow-hidden">
+        <a class="link black dim db" href="/{{ path }}">
           {{#if video}}
-          <video loop muted playsinline poster="/{{ path }}/thumb.jpg" class="db lazy w-100 video-thumb">
+          <video loop muted playsinline poster="/{{ path }}/thumb.jpg" class="db lazy w-100 video-thumb ba b--light-gray br2">
             <source
                     data-src="/{{ path }}/thumb.mp4"
                     type="video/mp4"> 
@@ -55,12 +49,18 @@
                  title="Your browser does not support the <video> tag">
           </video>
           {{else}}
-          <img class="db lazy w-100"
+          <img class="db lazy w-100 ba b--light-gray br2"
                data-src="/{{ path }}/512w-thumb.jpg"
                data-srcset="/{{ path }}/256w-thumb.jpg 256w,
                             /{{ path }}/512w-thumb.jpg 512w"
                alt="{{ alt }}">
           {{/if}}
+          <div class="dn db-l z-1">
+            <div class="w-100 pa2">
+              <p class="f6 mt1 mb1"><a href="/{{ path }}" class="link black dim">{{ title }}</a></p>
+              <p class="f7 mt0 mb0">{{ date }}</p>
+            </div>
+          </div>
         </a>
       </div>
   {{/each}}

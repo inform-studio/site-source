@@ -2,8 +2,8 @@
 <body class="w-100 black-90 f6 relative pa3-l pt1 pb1 mw8 center">
   <div class="pl3-l {{#if video}}w-100 {{/if}}">
     <div class="pl1 pr1 pa0-l">
-      <h2 class="mb0 f5-l f6 fw4 mt3-l mt1 pt2 pt0-l pb2 pb1-l"><a href="/" class="link black-90 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80">Inform Studio</a></h2>
-      <p class="f3-l f4 fw4 mt1 mb1">{{ title }}</p>
+      <h2 class="mb0 f5-l f6 fw4 mt3-l mt1 pt2 pt0-l pb2 pb1-l"><a href="/" class="link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">Inform Studio</a></h2>
+      <p class="f3-l f4 fw4 mt2 mb1">{{ title }}</p>
     </div>
     <div class="">
       {{#if video}}
@@ -12,7 +12,7 @@
       <img src="{{ full }}"
            srcset= "{{ sizes }}"
            alt="{{ alt }}"
-           class="w-100 ba-l b--black-80 db"
+           class="w-100 ba-l b--light-gray br2 db"
            style="max-width: {{ width }}">
       {{/if}}
     </div>
@@ -22,10 +22,10 @@
         <p class="f7 mw7">
           {{#if date}}{{ date }}{{/if}}
           {{#if client}} &#8226; {{ client }}{{/if}}
-          {{#if weblink}} &#8226; <a href="{{ weblink }}" class="bg-animate hover-bg-moon-gray">{{ weblink }}</a>{{/if}}
+          {{#if weblink}} &#8226; <a href="{{ weblink }}" class="link blue dim bb">{{ weblink }}</a>{{/if}}
           {{#if tag}} &#8226; Tagged: 
           {{#each tag}}
-           <a href="/tags/{{slugify . }}#work" class="bg-animate hover-bg-moon-gray">{{ . }}</a>{{#unless @last}},{{/unless}}
+           <a href="/tags/{{slugify . }}#work" class="link blue dim bb">{{ . }}</a>{{#unless @last}},{{/unless}}
           {{/each}}
           {{/if}}
         </p>
@@ -38,16 +38,16 @@
       {{/if}}
     </div>
     <div class="pl1 pr1 pa0-l">
-      <p class="f7 mt3-l {{#if contents}}{{else}}pt2-l{{/if}} mb3 mw6">Questions about the artwork? Email <a href="mailto:sean@inform.studio" class="bg-animate hover-bg-light-gray">sean@inform.studio</a>. &#8226; <a href="/copyright.html" class="bg-animate hover-bg-light-gray">Copyright Information</a></p>
+      <p class="f7 mt3-l {{#if contents}}{{else}}pt2-l{{/if}} mb3 mw6">Questions about the artwork? Email <a href="mailto:sean@inform.studio" class="link blue dim bb">sean@inform.studio</a>. &#8226; <a href="/copyright.html" class="link blue dim bb">Copyright Information</a></p>
     </div>
     <div class="w-100 mw7 flex mt2-l mb3-l mb2 pl1 pr1 pl0-l pr0-l pt1">
       {{#if previous }}
       <div class="w-third fl tl pt2-l pt1">
-        <a href="/{{ previous.path }}" class="bb b--black-90 fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80">← Previous</a>
-        <div class="relative overflow-hidden mt2 ba b--black-80 br2">
+        <a href="/{{ previous.path }}" class="bb b--black-90 fw5 fw4-l f5-l f6 link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">← Previous</a>
+        <div class="relative overflow-hidden mt2 ba b--light-gray br2">
         <a class="link black" href="/{{ previous.path }}">
           <div class="dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1 tl">
-            <div class="w-100 pa1 bg-white">
+            <div class="w-100 pa2 bg-white">
               <p class="f6">{{ previous.title }}</p>
               <p class="f7">{{ previous.date }}</p>
             </div>
@@ -73,15 +73,15 @@
       </div>
       {{/if}}
       <div class="w-third fl tc pt2-l pt1">
-        <a href="/#work" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80">All Work</a>
+        <a href="/#work" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">All Work</a>
       </div>
       {{#if next }}
       <div class="w-third fl tr pt2-l pt1">
-        <a href="/{{ next.path }}" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa1 br2 b--black-80">Next →</a>
-        <div class="relative overflow-hidden mt2 ba b--black-80 br2">
+        <a href="/{{ next.path }}" class="bb b--black-90 f5-l f6 fw5 fw4-l link black-90 bg-animate hover-bg-light-gray ba pa2-l pa1 br2 b--black-80">Next →</a>
+        <div class="relative overflow-hidden mt2 ba b--light-gray br2">
         <a class="link black" href="/{{ next.path }}">
           <div class="tl dn db-l absolute w-100 h-100 h-100 pb4-l fade-in z-1">
-            <div class="w-100 pa1 bg-white">
+            <div class="w-100 pa2 bg-white">
               <p class="f6">{{ next.title }}</p>
               <p class="f7">{{ next.date }}</p>
             </div>
