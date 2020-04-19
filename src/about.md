@@ -4,8 +4,8 @@ layout: static.hbs
 permalink: false
 ---
 <div id="about" class="mw6 right tc-l tl">
-  <img src="/images/headshot.jpg" class="w4 h4 br-100 dib mb1 ba b--dark-gray mt0-l mt2 headshot">
-  <p class="f3-l f4 fw4 mt2-l mt1 pt2 pt0-l">Hi! I'm Sean Kelley.</p>
+  <img src="/images/headshot.jpg" class="w4 h4 br-100 dib mb1-l mb0 ba b--dark-gray mt2 headshot">
+  <p class="f3-l f4 fw4 mt2-l mt0 pt1 pt0-l">Hi! I'm Sean Kelley.</p>
   <p class="f5 mt2-l mt0 measure tl">I help scientists, researchers, and other folks in technical fields communicate their results clearly and effectively.</p>
 </div>
 
@@ -32,4 +32,4 @@ In the past, we’ve worked with:
 - Purdue University
 - Science News
 
-Questions or project inquiries? Contact sean@inform.studio.
+<p class="f5 measure tl">Questions or project inquiries? Contact <a class="blue link bb" href="mailto:sean@inform.studio.">sean@inform.studio</a></p>
