@@ -9,8 +9,19 @@
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
   <style>
+    @font-face {
+      font-family: 'open-arrow';
+      src: url('/fonts/OpenArrow-Regular.eot') format('embedded-opentype'),
+           url('/fonts/OpenArrow-Regular.woff2') format('woff2'),
+           url('/fonts/OpenArrow-Regular.woff') format('woff'),
+           url('/fonts/OpenArrow-Regular.otf') format('opentype'),
+           url('/fonts/OpenArrow-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      unicode-range: U+2190-21ff;
+    }
     @import "/inter.css";
-    html { font-family: 'Inter', sans-serif; line-height: 1.15;}
+    html { font-family: 'open-arrow', 'Inter', sans-serif; line-height: 1.15;}
     ul {
       padding-left:1rem;
     }
