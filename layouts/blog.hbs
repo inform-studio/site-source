@@ -1,23 +1,18 @@
 {{> header }}
-{{> top-nav active="Blog"}}
-    <nav class="fl-l">
-      <ul class="list pl0">
-        <li class="dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/" style="font-weight: 600; color: black;">By Date</a>
-        <p class="f6 mw5 dn db-l">All entries ordered by date.</p>
-        </li>
-        <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/tags">By Tag</a></li>
-      </ul>
-      <p class="f6 mw5 db dn-l">All entries ordered by date.</p>
-    </nav>
-</div>
-</header>
-  <main class="mw8 fl mt3-l mt0">
-    <div class="pl3-l pr3-l pr2 pl2 mb4-l pt1-l">
+  {{> nav active="Blog"}}
+  <div class="ml3-l mr3-l ml1 mr1">
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2 bb b--black-80">Blog Entries</p>
+    <p class="mb0 fl mt2 pr3-l pr2 pt1-l pt0">Order by:</p>
+    {{> blog-nav active="Date"}}
+  </div>
+  <main class="ml3-l mr3-l ml1 mr1">
+    <div class="mw6 mb4-l mb3 mt3-l mt0">
       {{#each blog }}
         {{> blog-entry }}
       {{/each}}
     </div>
-    {{> footer }}
-    </main>
+  <div class="mt5-l mt4"></div>
+  </main>
+  {{> footer}}
 </body>
 </html>

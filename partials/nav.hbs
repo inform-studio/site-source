@@ -1,69 +1,9 @@
-<nav class="mb4 dn db-l">
-  <ul class="list pl0 pt2-l">
-  
-    <li class="dib db-l mr2 mt1-l">
-<!--      <a class="f5 link dim dark-gray-l gray" href="/work/" {{#if title}}{{else}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if}}>All</a>-->
-    {{#if title}}{{else}}<p class="f6 detail mt1 dn db-l mt1-l">Filter by category &#8595;</p>{{/if}}
-    </li>
-    
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/work/demo-reel/" {{#if_eq title "Demo Reel"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Demo Reel</a>
-    {{#if_eq title "Demo Reel"}}
-      <p class="f6 detail mt2 dn db-l">Video summary of recent work.</p>
-    {{/if_eq}}
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/illustration/" {{#if_eq title "Illustration"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Illustration</a>
-    {{#if_eq title "Illustration"}}
-      <p class="f6 detail mt2 dn db-l">Artistic interpretations of unseen physical phenomena, ranging from accurate to highly stylized.</p>
-    {{/if_eq}}
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 link dim dark-gray-l gray" href="/tags/animation/" {{#if_eq title "Animation"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Animation</a>
-      {{#if_eq title "Animation"}}
-      <p class="f6 detail mt2 dn db-l">Simple cartoons, motion graphics, animated figures and in-depth explanatory videos.</p>
-    {{/if_eq}}
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/diagrams/" {{#if_eq title "Diagrams"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Diagrams</a>
-      {{#if_eq title "Diagrams"}}
-      <p class="f6 detail mt2 dn db-l">Pictures that explain how something works by showing a process, visualizing data, or presenting a detailed look at a device. These include paper figures, charts, infographics, and technical illustrations.</p>
-    {{/if_eq}}
-    </li>
-    
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/journal-covers/" {{#if_eq title "Journal Covers"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Journal&nbsp;Covers</a>
-    {{#if_eq title "Journal Covers"}}
-      <p class="f6 detail mt2 dn db-l">A mix of used and unused illustrations submitted for consideration as journal covers.</p>
-    {{/if_eq}}
-    </li>
-  
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class=" link dim dark-gray-l gray" href="/tags/interactive/" {{#if_eq title "Interactive"}}style="font-weight: 500; border-bottom: 1px solid #333333; color: black;"{{/if_eq}}>Web / Interactive</a>
-    {{#if_eq title "Interactive"}}
-      <p class="f6 detail mt1 dn db-l">Coming soon.</p>
-    {{/if_eq}}
-    </li>
-    
-  </ul>
-  
-  {{#if title}}{{else}}<p class="f6 mw6 db dn-l">Collection of all past work. Filter by category ↑</p>{{/if}}
-  
-  {{#if_eq title "Illustration"}}
-      <p class="f6 mw6 db dn-l">Artistic interpretations of unseen physical phenomena, ranging from accurate to highly stylized.</p>
-    {{/if_eq}}
-  
-  {{#if_eq title "Animation"}}
-      <p class="f6 mw6 db dn-l">Simple cartoons, motion graphics, animated figures and in-depth explanatory videos.</p>
-    {{/if_eq}}
-  
-  {{#if_eq title "Diagrams"}}
-      <p class="f6 mw6 db dn-l">Pictures that explain how something works by showing a process, visualizing data, or presenting a detail mt1ed look at a device. These include paper figures, charts, infographics, and technical illustrations.</p>
-    {{/if_eq}}
-  
-   {{#if_eq title "Journal Covers"}}
-      <p class="f6 mw6 db dn-l">A mix of used and unused illustrations submitted for consideration as journal covers.</p>
-    {{/if_eq}}
-  
-  {{#if_eq title "Interactive"}}
-      <p class="f6 mw6 db dn-l">Coming soon.</p>
-    {{/if_eq}}
-  
-</nav>
+<body class="w-100 black-90 f6 relative pa3-l pt0 pb1 mw8 center">
+  <header class="ml3-l mr3-l ml1 mr1 mb3 pb2 mb0-l pb4-l">
+    <div id="head" class="w-100 center">
+      <div class="pt3-l pb2-l mt2">
+        <a href="/" class="f4-l f6 link black mb0 dim dn fl-l db-l">Inform Studio</a>
+        {{> nav-links active=active}}
+      </div>
+    </div>
+  </header>

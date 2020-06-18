@@ -11,6 +11,7 @@ var watch = require('metalsmith-watch');
 var filename = require("metalsmith-file-titles");
 var inplace = require("metalsmith-in-place")
 var inspect = require("metalsmith-inspect")
+var codeHighlight = require("metalsmith-code-highlight")
 
 var repeat = require('handlebars-helper-repeat');
 
@@ -117,6 +118,7 @@ metalsmith(__dirname)
             default: 'article.hbs',
             pattern: ["*/*/*.html","*/*.html","*.html"]
         }))
+  .use(codeHighlight())
 //  .use(writemetadata({            // write the JS object
 //      pattern: ['**/*'],            // for each file into .json
 //      ignorekeys: ['next', 'previous'],

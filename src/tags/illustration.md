@@ -1,4 +1,4 @@
 ---
 title: "Illustration"
-layout: index.hbs
+layout: work.hbs
 ---

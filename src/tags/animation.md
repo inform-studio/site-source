@@ -1,4 +1,4 @@
 ---
 title: "Animation"
-layout: index.hbs
+layout: work.hbs
 ---

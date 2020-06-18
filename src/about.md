@@ -1,5 +1,6 @@
 ---
 title: "Visual Design for Scientific Communication"
+cat: "About"
 layout: static.hbs
 permalink: false
 ---

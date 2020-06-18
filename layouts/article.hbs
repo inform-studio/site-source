@@ -1,27 +1,53 @@
 {{> header }}
-{{> top-nav active="Blog"}}
-<nav class="fl-l dn db-l">
-  <ul class="list pl0">
-    <li class="dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/">By Date</a>
-    </li>
-    <li class="mt1-l dib db-l mr2 mr0-l"><a class="f5 db link dim dark-gray" href="/blog/tags">By Tag</a></li>
-  </ul>
-</nav>
-</div>
-</header>
-  <main class="w-100 mw7 fl mt3-l mt0 pl4-l pl0">
-    <div class="pl3-l pr3-l">
-      <h1 class="f4 fw4 mb4-l pr2 pl2 pl0-l pr0-l">{{ title }}</h1>
-      <article class="mw6 f5-l f6 contents">{{{ contents }}}</article>
-      <p class="f6-l f7 mt4-l pl2 pr2 pl0-l pr0-l">Published: {{ published }}
-        {{#if tag}} &#8226; Tagged: 
-          {{#each tag}}
-           <a href="/blog/tags#{{slugify . }}">{{ . }}</a>{{#unless @last}},{{/unless}}
-          {{/each}}
-        {{/if}}
-      </p>
+{{> nav active="Blog"}}
+  <div class="ml3-l mr3-l ml1 mr1">
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2">{{ title }}</p>
+     <p class="f7">Published: {{ published }}
+      {{#if tag}} &#8226; Tagged: 
+        {{#each tag}}
+         <a href="/blog/tags#{{slugify . }}">{{ . }}</a>{{#unless @last}},{{/unless}}
+        {{/each}}
+      {{/if}}
+    </p>
+  </div>
+  <main class="ml3-l mr3-l ml1 mr1">
+    <div class="mb4-l mb3 mt3-l mt2 blog">
+      {{{contents}}}
     </div>
-  {{> footer }}
-</main>
+    <div class="pa0-l">
+      <p class="f7 mb3 mw6">Questions or comments? Email <a href="mailto:sean@inform.studio" class="link blue dim bb-l">sean@inform.studio</a>.</p>
+    </div>
+    <div class="w-100 mw7 flex mt4-l mb3-l mb2 pt1">
+      {{#if next }} 
+      <div class="w-third fl tc-l tl pt2-l pt1">
+        <a href="/{{ next.path }}" class="fw5 fw4-l link black-90 dim nav-links f5"><span style="padding-top:0.25rem; font-size:85%;">&#x2190</span> Previous
+          <a class="link black" href="/{{ next.path }}">
+            <div class="ba b--black-80 br2 pa2 mt2 dim">
+              <p class="f5 mt2 mb0">{{ next.title }}</p>
+              <p class="f7 mt1">{{ next.published }}</p>
+            </div>
+          </a>
+        </a>
+      </div>
+      {{/if}}
+      <div class="w-third fl tc pt2-l pt1">
+        <a href="/blog/" class="fw5 fw4-l link black-90 dim nav-links f5">All Posts</a>
+      </div>
+      {{#if previous }}
+       <div class="w-third fl tc-l tr pt2-l pt1">
+        <a href="/{{ previous.path }}" class="fw5 fw4-l link black-90 dim nav-links f5">Next <span style="padding-top:0.25rem; font-size:85%;">&#x2192</span> 
+          <a class="link black dim" href="/{{ previous.path }}">
+            <div class="ba b--black-80 br2 pa2 mt2 dim">
+              <p class="f5 mt2 mb0">{{ previous.title }}</p>
+              <p class="f7 mt1">{{ previous.published }}</p>
+            </div>
+          </a>
+        </a>
+      </div>
+      {{/if}}
+    </div>
+  <div class="mt4-l mt2 pt1 pt0-l"></div>
+  </main>
+  {{> footer}}
 </body>
 </html>

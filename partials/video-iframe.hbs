@@ -16,8 +16,8 @@
 {{else}}
 
 {{/if}}-->
-<div style="width: 100%; max-width: {{ width }}" class="ba-l b--light-gray br2-l db overflow-hidden">
-  <div style="{{#if box}}padding:100%{{else}}padding:56.25%{{/if}} 0 0 0;position:relative;" class="">
+<div style="width: 100%; max-width: {{ width }}" class="ba-l b--black-80 br2-l db overflow-hidden">
+  <div style="{{#if width-percent }} padding: {{width-percent}} {{else}} padding:56.25% {{/if}} 0 0 0;position:relative;" class="">
     <iframe src="{{ full }}?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
 </div>

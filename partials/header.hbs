@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/tachyons.min.css">
   <link rel="stylesheet" href="/inter.css">
+  <link rel="stylesheet" href="/highlight.css">
   <style>
     @font-face {
       font-family: 'open-arrow';
@@ -25,11 +26,49 @@
     ul {
       padding-left:1rem;
     }
+    /*    Messing around with inverted theme*/
+/*
+    .black {
+      color: white !important;
+    }
+    .b--black-80 {
+      border-color: white !important;
+    }
+    a {
+      color: #349cf7 !important;
+    }
+    .bg-light-gray {
+      background-color: white !important;
+      color: black !important;
+    }
+    .hover-bg-light-gray:hover {
+      background-color: white !important;
+      color: black !important;
+    }
+    .bw1 {
+      border-color: white !important;
+    }
+    .bg-white {
+      color: black !important;
+    }
+*/
     @media (min-width: 60rem) {
       html {line-height: 1.5;}
       .headshot {
         width: 200px;
         height: 200px
+      }
+      .nav-links {
+        font-size: 1.15rem;
+      }
+      .index-button {
+        max-width: 20rem;
+      }
+      code {
+        font-size: 0.8rem !important;
+      }
+      pre code {
+        padding: 1rem !important;
       }
     }
     @media (max-width: 60rem) {
@@ -40,31 +79,63 @@
       padding-left: 0.125rem;
       padding-right: 0.125rem;
       }
+      .link-mobile {
+        border-bottom: 1px solid black;
+      }
+    }
+    .selected {
+     border-bottom: 3px solid black;
+    }
+    .b-button {
+      box-sizing: border-box;
+    }
+    a {
+      color: #0074D9;
+    }
+    code {
+      font-size: 0.7rem;
     }
     .contents :not(img) {
       max-width: 30em;
+    }
+    .blog :not(.lang-highlight):not(code) {
+       max-width: 36em;
+    }
+    pre code {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    pre {
+     white-space: pre-wrap;       /* css-3 */
+     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+     white-space: -pre-wrap;      /* Opera 4-6 */
+     white-space: -o-pre-wrap;    /* Opera 7 */
+     word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+    .contents img {
+      width: 100%;
+      border: 1px solid rgb(0, 0, 0, 0.8);
+      border-radius: .25rem;
+      box-sizing: border-box;
     }
     .video-thumb::-internal-media-controls-overlay-cast-button {
       display: none;
     }
     .fade-in {
         opacity: 0;
+        transition: 0.15s ease-in;
       }
     .fade-in:hover {
         opacity: 1;
       }
-      .fade-in {
-        opacity: 0;
-      }
-      .fade-in:hover {
-        opacity: 1;
-      }
-    
       /* Styling for lazy loaded images */
 
       .lazy {
         opacity:0;
-        transition: opacity 1s;
+        transition: opacity 1s linear;
       }
 
       .lazy.initial {

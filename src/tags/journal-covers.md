@@ -1,4 +1,4 @@
 ---
 title: "Journal Covers"
-layout: index.hbs
+layout: work.hbs
 ---

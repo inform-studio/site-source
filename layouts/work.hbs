@@ -1,15 +1,14 @@
 {{> header }}
-{{> top-nav active="Work"}}
+{{> nav active="Work"}}
+  <div class="ml3-l mr3-l ml1 mr1">
+    <p class="f3-l f4 fw4 mt4-l pt2-l mt2 mb2 bb b--black-80">{{#if title}}{{ title }}{{else}}Past Work{{/if}}</p>
+    <p class="mb0 fl mt2 pr3-l pr2 pt1-l pt0">Filter by category:</p>
+    {{> grid-nav category=title}}
   </div>
-</header>
-  <main class="mw8 fl mt3-l mt2">
-    {{#if title}}
-    <h1 class="f4 fw4 mb3-l dn db-l pl3">{{title}}</h1>
-    {{> grid category=title}} {{else}}
-    <h1 class="f4 fw4 mb4-l dn db-l pl3">Visual Design for Scientific Communication</h1>
-    <p class="dark-gray mw6 f5 pl3-l">From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
-    <p class="mw6 f5 mb3 mb4-l pl3-l">Interested in working together? Email <a href="mailto:sean@inform.studio">sean@inform.studio</a> and we'll make it happen.</p>
-    {{> grid category=title}} {{/if}}
+  <main>
+    {{> grid category=title}}
   </main>
+  <div class="mt4"></div>
+  {{> footer}}
   </body>
 </html>

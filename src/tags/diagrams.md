@@ -1,4 +1,4 @@
 ---
 title: "Diagrams"
-layout: index.hbs
+layout: work.hbs
 ---

@@ -1,4 +1,4 @@
 ---
 title: "Interactive"
-layout: index.hbs
+layout: work.hbs
 ---
