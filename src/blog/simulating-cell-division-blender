@@ -1,0 +1,10 @@
+---
+title: "Simulating cell division in Blender"
+slug: "simulating-cell-division-blender"
+published: 2020-06-30
+blurb: "Using python and some blender physics to simulate a simple model of cell division"
+tag:
+  - "Python"
+  - "Blender"
+active: "Blog"
+---

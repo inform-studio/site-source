@@ -1,14 +1,21 @@
 {{> header }}
   {{> nav active="Home"}}
-  <div class="ml3-l mr3-l ml1 mr1">
-    <p class="f2-l f3 fw4 mt5-l dn db-l">Sometimes words fall short.</p>
-    <div style="max-width: 30rem">
-      <p class="f4 mt5-l mt2 mw5 measure-l"><span class="fw5-l">Inform Studio</span> is a design studio specializing in scientific communication. </p>
-      <p class="f5 lh-copy-l mw5 measure-l">From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
+  <div class="ml3-l mr3-l ml1 mr1 mt4-l">
+<!--    <p class="f2-l f3 fw4 mt5-l dn db-l">Sometimes words fall short.</p>-->
+    <div class="dib w-50 v-mid">
+      <div style="max-width: 30rem">
+        <p class="f3-l f4 mt2-l mt2 mw5 measure-l"><span class="fw5-l">Inform Studio</span> is a design studio specializing in scientific communication. </p>
+        <p class="f5 lh-copy-l mw5 measure-l">From technical illustrations to detailed animations, we translate complex scientific phenomena into clear visual form.</p>
+      </div>
     </div>
+    <div class="dib-l dn pl4 v-mid" style="width:49.5%">
+        <video loop muted playsinline class="lazy w-100 video-thumb">
+          <source data-src="/images/transition.mp4" type="video/mp4"> 
+        </video>
+      </div>
   </div>
   <main>
-    <div class="ml3-l mr3-l ml1 mr1 mt5-l pt1">
+    <div class="ml3-l mr3-l ml1 mr1 mt0-l pt1">
       <p class="f3-l f4 fw4 mb2 bb-l b--black-80 mb3-l mt3-l mt0" id="work">{{#if title}}{{title}}{{else}}Featured Work{{/if}}</p>
     </div>
     <div class="pa0-l grid-spacer">{{> grid-index category=title}}</div>
